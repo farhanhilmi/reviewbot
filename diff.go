@@ -7,7 +7,7 @@ import (
 )
 
 func GetGitDiff() (string, error) {
-	cmd := exec.Command("git", "diff", "origin/main...HEAD", "--unified=0")
+	cmd := exec.Command("git", "diff", "--unified=0")
 	var out bytes.Buffer
 	cmd.Stdout = &out
 
